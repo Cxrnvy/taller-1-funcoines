@@ -2,12 +2,10 @@ package main
 
 import "fmt"
 
-// Función para calcular el promedio de forma muy sencilla
 func averageGrade(sumaNotas float64, cantidad int) float64 {
 	return sumaNotas / float64(cantidad)
 }
 
-// Opción 1: Promedio de notas
 func opcion1() {
 	var cantidad int
 	var nota, sumaNotas float64
@@ -15,38 +13,33 @@ func opcion1() {
 	fmt.Print("Ingrese la cantidad de estudiantes: ")
 	fmt.Scan(&cantidad)
 
-	// Usamos un for para pedir cada nota y sumarla
 	for i := 1; i <= cantidad; i++ {
 		fmt.Printf("Ingrese la nota del estudiante %d (0 a 100): ", i)
 		fmt.Scan(&nota)
 		sumaNotas = sumaNotas + nota
 	}
 
-	// Calculamos el promedio usando nuestra función
 	promedio := averageGrade(sumaNotas, cantidad)
 	fmt.Printf("\nEl promedio del curso es: %.2f\n", promedio)
 
-	// IF para determinar si es aprobado o reprobado
 	if promedio >= 70 {
 		fmt.Println("Estado: APROBADO")
 	} else {
 		fmt.Println("Estado: REPROBADO")
 	}
 
-	// SWITCH para mostrar el mensaje según el rango
 	switch {
 	case promedio >= 90 && promedio <= 100:
-		fmt.Println("Mensaje: Excellent performance")
+		fmt.Println("Mensaje: Rendimiento excelente")
 	case promedio >= 80 && promedio <= 89:
-		fmt.Println("Mensaje: Good performance")
+		fmt.Println("Mensaje: Buen rendimiento")
 	case promedio >= 70 && promedio <= 79:
-		fmt.Println("Mensaje: Satisfactory performance")
+		fmt.Println("Mensaje: Rendimiento satisfactorio")
 	case promedio < 70:
-		fmt.Println("Mensaje: Needs improvement")
+		fmt.Println("Mensaje: Necesita mejorar")
 	}
 }
 
-// Opción 2: Suma de números del 1 al n
 func opcion2() {
 	var n, suma int
 	fmt.Print("Ingrese el número límite (n): ")
