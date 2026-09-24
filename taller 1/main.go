@@ -6,6 +6,7 @@ func averageGrade(sumaNotas float64, cantidad int) float64 {
 	return sumaNotas / float64(cantidad)
 }
 
+// OP 1
 func opcion1() {
 	var cantidad int
 	var nota, sumaNotas float64
@@ -30,16 +31,17 @@ func opcion1() {
 
 	switch {
 	case promedio >= 90 && promedio <= 100:
-		fmt.Println("Mensaje: Rendimiento excelente")
+		fmt.Println("Rendimiento excelente")
 	case promedio >= 80 && promedio <= 89:
-		fmt.Println("Mensaje: Buen rendimiento")
+		fmt.Println("Buen rendimiento")
 	case promedio >= 70 && promedio <= 79:
-		fmt.Println("Mensaje: Rendimiento satisfactorio")
+		fmt.Println("Rendimiento satisfactorio")
 	case promedio < 70:
-		fmt.Println("Mensaje: Necesita mejorar")
+		fmt.Println("Necesita mejorar")
 	}
 }
 
+// OP 2
 func opcion2() {
 	var n, suma int
 	fmt.Print("Ingrese el número límite (n): ")
@@ -51,7 +53,7 @@ func opcion2() {
 	fmt.Printf("La suma del 1 al %d es: %d\n", n, suma)
 }
 
-// Opción 3: Celsius a Fahrenheit
+// OP 3
 func opcion3() {
 	var celsius float64
 	fmt.Print("Ingrese la temperatura en Celsius: ")
@@ -61,7 +63,7 @@ func opcion3() {
 	fmt.Printf("%.2f Celsius son %.2f Fahrenheit\n", celsius, fahrenheit)
 }
 
-// Opción 4: Fahrenheit a Celsius
+// OP 4
 func opcion4() {
 	var fahrenheit float64
 	fmt.Print("Ingrese la temperatura en Fahrenheit: ")
@@ -70,29 +72,24 @@ func opcion4() {
 	celsius := (fahrenheit - 32) * 5 / 9
 	fmt.Printf("%.2f Fahrenheit son %.2f Celsius\n", fahrenheit, celsius)
 }
-
-// Función principal
 func main() {
 	var opcion string
 
 	for {
-		fmt.Println("\n--- Menú Principal ---")
-		fmt.Println("1. Promedio de estudiantes")
-		fmt.Println("2. Suma de números del 1 al n")
-		fmt.Println("3. Celsius a Fahrenheit")
-		fmt.Println("4. Fahrenheit a Celsius")
-		fmt.Println("0. Salir (o escriba 'salir')")
+		fmt.Println("\nMenú Principal")
+		fmt.Println("1 Promedio de estudiantes")
+		fmt.Println("2 Suma de números del 1 al n")
+		fmt.Println("3 Celsius a Fahrenheit")
+		fmt.Println("4 Fahrenheit a Celsius")
+		fmt.Println("0 Salir (o escriba 'salir')")
 		fmt.Print("Seleccione una opción: ")
-
 		fmt.Scan(&opcion)
 
-		// Evaluamos directamente si es "0", "salir" o "Salir" sin importar librerías extra
 		if opcion == "0" || opcion == "salir" || opcion == "Salir" {
 			fmt.Println("Saliendo del programa...")
 			break
 		}
-
-		// Ejecutamos la función correspondiente con un switch simple
+		//Funcionamiento Menú Principal
 		switch opcion {
 		case "1":
 			opcion1()
