@@ -16,7 +16,6 @@ func main() {
 		fmt.Print("Elige una opción: ")
 		fmt.Scan(&opcion)
 
-		// Condicionales (Tema 1.2) para el menú
 		if opcion == 0 {
 			fmt.Println("Fin del programa.")
 			break

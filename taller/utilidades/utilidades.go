@@ -3,7 +3,6 @@ package utilidades
 import "fmt"
 
 func ConvertirMoneda(dolares float64, moneda string) {
-	// Usamos condicionales básicos (Tema 1.2)
 	if moneda == "Euros" || moneda == "euros" {
 		fmt.Println(dolares, "USD equivalen a", dolares*0.92, "Euros")
 	} else if moneda == "LB" || moneda == "lb" {
@@ -18,14 +17,13 @@ func ConvertirMoneda(dolares float64, moneda string) {
 }
 
 func ContarVocales(palabra string) {
-	// Variables inicializadas en 0
+
 	a := 0
 	e := 0
 	i := 0
 	o := 0
 	u := 0
 
-	// Bucle iterativo (Tema 1.3) para revisar cada letra
 	for _, letra := range palabra {
 		if letra == 'a' || letra == 'A' {
 			a++
